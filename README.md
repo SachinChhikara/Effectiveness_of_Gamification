@@ -1,4 +1,4 @@
-# Effectivness of Gamification.
+# Effectivness of Gamification
 
 ## Overview
 
@@ -10,7 +10,7 @@ application of it.
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from X.
+-   `data/raw_data` contains the raw data as obtained from Duolingo.
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
@@ -20,4 +20,4 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the ChatGPT 3.5,the entire chat history is available in `other/llms/usage.txt`.
+Aspects of the code were written with the help of the ChatGPT-3.5, the entire chat history is available in `other/llms/usage.txt`.

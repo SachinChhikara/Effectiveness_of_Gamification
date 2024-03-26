@@ -1,4 +1,4 @@
-LLM: ChatGPT-2.5
+LLM: ChatGPT-3.5
 Date: 26 March 2024
 
 User:
