@@ -1,9 +1,7 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Gamification Effectiveness on Education"
 author: 
-  - First author
-  - Another author
+  - Sachin Chhikara
 thanks: "Code and data are available at: LINK."
 date: today
 date-format: long
@@ -25,9 +23,7 @@ library(palmerpenguins)
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
-
-The remainder of this paper is structured as follows. @sec-data....
+Games have been part of human history for a long time and are loved by many young and old. The design behind why game are so fun have investigated in recent time and how to apply those element that are fun and to apply them to other fields, this is known as gamification. Gamification is used in fields such as enterprise, sales, lifestyle and education. In this paper we will focusing on application of education, we be using data from Duolingu, training model and making inference off, real life application of gamification to an individual productive.
 
 
 
@@ -179,15 +175,6 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
 ```
 
 ## Diagnostics
@@ -217,5 +204,6 @@ plot(first_model, "rhat")
 
 
 # References
-
-
+---
+nocite: '@*'
+---
