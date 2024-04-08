@@ -10,28 +10,25 @@
 library(arrow)
 library(tidyverse)
 library(rstanarm)
+library(modelsummary)
 
 #### Read data ####
 analysis_data <- read_parquet(file = "data/analysis_data/analysis_data.parquet")
 
-analysis_data |>
-  ggplot(aes(x = certainty, y = outcome)) +
-  geom_jitter(height = 0)
-
 
 ### Model data ####
 first_model <-
-  stan_glm(
-    formula = outcome ~ certainty,
+  stan_glm( 
+    formula = FinalExamination ~ Group,
     data = analysis_data,
-    family = binomial(link = "logit"),
+    family = gaussian(),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_aux = exponential(rate = 1, autoscale = TRUE),
     seed = 853
   )
 
-summary(first_model)
+modelsummary(first_model)
 
 #### Save model ####
 saveRDS(
