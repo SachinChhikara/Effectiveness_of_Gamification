@@ -26,6 +26,9 @@ library(palmerpenguins)
 Games have been part of human history for a long time and are loved by many young and old. The design behind why game are so fun have investigated in recent time and how to apply those element that are fun and to apply them to other fields, this is known as gamification. Gamification is used in fields such as enterprise, sales, lifestyle and education. In this paper we will focusing on application of education, we be using data from Duolingu, training model and making inference off, real life application of gamification to an individual productive.
 
 
+In this paper, we are doing replication of a study ... , which has a control and treatment where the treatment is applied gamification, while the control is using an ordinary education system. Yeah there benefits, but there are downside when comes to how the gamification as it might discourage learning. Furthermore, an wide use application of gamification is a language learning app called Duolingo, which has ... active users and this app learning is recognized in certain Universities as legitimate English learning.So we examine game design that are use. Ways to apply gamification in daily lives, like this app called Habitica: Gamify your tasks.
+
+
 
 # Data {#sec-data}
 
