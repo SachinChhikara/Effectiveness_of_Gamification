@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Cleans the raw data
 # Author: Sachin Chhikara
-# Date: 26 March 2024 
+# Date: 8 April 2024 
 # Contact: sachin.chhikarar@utoronto.ca
 # License: MIT
 
@@ -10,18 +10,20 @@ library(arrow)
 library(tidyverse)
 
 #### Clean data ####
-raw_data <- read_csv("data/raw_data/raw_data.csv")
+raw_data <- read_csv("data/raw_data/1-s2.0-S2352340917300173-mmc2.csv")
+
 
 cleaned_data <-
   raw_data |>
-  janitor::clean_names() |>
-  select(-timestamp) |>
-  rename(c(certainty = how_certain_about_your_guess_are_you,
-           outcome = what_was_the_outcome)) |> 
-  mutate(
-    outcome = if_else(outcome == "Guessed right",
-                      1,
-                      0))
+  select(-Age) |>
+  mutate(Group = case_when(
+    Group == 0 ~ "Control group",
+    Group == 1 ~ "Educational game",
+    Group == 2 ~ "Gamification plugin",
+    Group == 3 ~ "Social networking website",
+    Group == 4 ~ "Social gamified networking website"
+  ))
+
 
 
 #### Save data ####
