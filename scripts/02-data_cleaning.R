@@ -24,7 +24,9 @@ cleaned_data <-
     Group == 4 ~ "Social gamified networking website"
   ),
   Gender = case_when(Gender == "M" ~ "Male", Gender == "F" ~ "Female")
-  )
+  ) |>
+  tidyr::drop_na()
+  
 
 
 
