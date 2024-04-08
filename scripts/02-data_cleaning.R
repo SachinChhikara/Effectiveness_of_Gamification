@@ -22,7 +22,9 @@ cleaned_data <-
     Group == 2 ~ "Gamification plugin",
     Group == 3 ~ "Social networking website",
     Group == 4 ~ "Social gamified networking website"
-  ))
+  ),
+  Gender = case_when(Gender == "M" ~ "Male", Gender == "F" ~ "Female")
+  )
 
 
 
