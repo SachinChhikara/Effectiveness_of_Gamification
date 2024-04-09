@@ -18,6 +18,7 @@ bibliography: references.bib
 
 library(tidyverse)
 library(palmerpenguins)
+library(arrow)
 ```
 
 
@@ -59,14 +60,9 @@ And also planes (@fig-planes). (You can change the height and width, but don't w
 #| warning: false
 #| message: false
 
-analysis_data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+analysis_data <- read_parquet(here::here("data/analysis_data/analysis_data.parquet"))
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+
 ```
 
 Talk way more about it. 
