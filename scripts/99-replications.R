@@ -10,6 +10,7 @@ library(tidyverse)
 library(arrow)
 library(knitr)
 library(kableExtra)
+library(gridExtra)
 
 #### Load data ####
 analysis_data <- read_parquet(file = "data/analysis_data/analysis_data.parquet")
@@ -71,13 +72,43 @@ data2 <- data.frame(
 
 ### Figures ###
 #Figure 5
-
-
-#Figure 6
-ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group)) +
+plot1 <- ggplot(analysis_data, aes(x = Group, y = WordProcPosttest, color = Group)) +
   geom_boxplot() +
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
-  labs(x = "Group Type", y = "Final Examination Grade", title = "Scatterplot of Grades by Group Type") +
+  labs(x = "Group Type", y = "Word Processing") +
   theme(axis.text.x = element_blank())
 
+plot2 <- ggplot(analysis_data, aes(x = Group, y = SpreadsheetsPosttest, color = Group)) +
+  geom_boxplot() +
+  geom_point() +
+  geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
+  labs(x = "Group Type", y = "Presentations") +
+  theme(axis.text.x = element_blank())
+
+plot3 <- ggplot(analysis_data, aes(x = Group, y = PresentationPosttest, color = Group)) +
+  geom_boxplot() +
+  geom_point() +
+  geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
+  labs(x = "Group Type", y = "Word Processing") +
+  theme(axis.text.x = element_blank())
+
+plot4 <- ggplot(analysis_data, aes(x = Group, y = DatabasesPosttest, color = Group)) +
+  geom_boxplot() +
+  geom_point() +
+  geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
+  labs(x = "Group Type", y = "Databases") +
+  theme(axis.text.x = element_blank())
+
+fig5 <- grid.arrange(plot1, plot2, plot3, plot4, nrow = 2, ncol = 2)
+ggsave("other/figures/figure5.png", width = 10, height = 8, fig5) 
+
+#Figure 6
+fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group)) +
+  geom_boxplot() +
+  geom_point() +
+  geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
+  labs(x = "Group Type", y = "Final Examination Grade") +
+  theme(axis.text.x = element_blank())
+
+ggsave("other/figures/figure6.png", fig6)
