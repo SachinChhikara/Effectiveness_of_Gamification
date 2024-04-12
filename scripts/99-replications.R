@@ -70,10 +70,14 @@ data2 <- data.frame(
 )
 
 ### Figures ###
-
 #Figure 5
 
+
 #Figure 6
-
-
+ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group)) +
+  geom_boxplot() +
+  geom_point() +
+  geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
+  labs(x = "Group Type", y = "Final Examination Grade", title = "Scatterplot of Grades by Group Type") +
+  theme(axis.text.x = element_blank())
 
