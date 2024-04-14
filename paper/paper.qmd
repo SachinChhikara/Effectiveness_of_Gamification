@@ -21,19 +21,19 @@ library(palmerpenguins)
 library(arrow)
 ```
 
-
 # Introduction
 
 Games have been part of human history for a long time and are loved by many young and old. The design behind why game are so fun have investigated in recent time and how to apply those element that are fun and to apply them to other fields, this is known as gamification. Gamification is used in fields such as enterprise, sales, lifestyle and education. In this paper we will focusing on application of education, we be using data from Duolingu, training model and making inference off, real life application of gamification to an individual productive.
 
-
 In this paper, we are doing replication of a study ... , which has a control and treatment where the treatment is applied gamification, while the control is using an ordinary education system. Yeah there benefits, but there are downside when comes to how the gamification as it might discourage learning. Furthermore, an wide use application of gamification is a language learning app called Duolingo, which has ... active users and this app learning is recognized in certain Universities as legitimate English learning.So we examine game design that are use. Ways to apply gamification in daily lives, like this app called Habitica: Gamify your tasks.
-
-
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+The original study used 379 undergraduates for their experiments and there were randomly assigned into 5 groups Control, Educational game, Gamification Plugin, Social networking website, Social gamified networking website. The experiment was carried out on 10-week first year undergraduate class called ‘Qualification for ICT Users’ with hybrid learning. This course is an introduction to basic computing concepts such as word processing, spreadsheets, presentations and databases. There is an assignment for each of these four concepts which focus on testing practical skills. While, the final examination is cumulative and focus on testing conceptual knowledge.
+
+Students have lecture every two weeks and must work independently rest of the work to learn then material. Supplementary learning material was provided such as videos and communication tools in learning material platform.
+
+The control group just use what was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (fig 1) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (fig 2) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(fig 3). A summary of the groups features and potential benefits (fig 4). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
 
 ```{r}
 #| label: fig-bills
@@ -65,9 +65,7 @@ analysis_data <- read_parquet(here::here("data/analysis_data/analysis_data.parqu
 
 ```
 
-Talk way more about it. 
-
-
+Talk way more about it.
 
 # Model
 
@@ -77,8 +75,9 @@ Here we briefly describe the Bayesian analysis model used to investigate... Back
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.
 
+```{=tex}
 \begin{align} 
 y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
 \mu_i &= \alpha + \beta_i + \gamma_i\\
@@ -87,16 +86,14 @@ y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
 \gamma &\sim \mbox{Normal}(0, 2.5) \\
 \sigma &\sim \mbox{Exponential}(1)
 \end{align}
-
+```
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
 
 ### Model justification
 
 We expect a positive relationship between the size of the wings and time spent aloft. In particular...
 
 We can use maths by including latex between dollar signs, for instance $\theta$.
-
 
 # Results
 
@@ -130,14 +127,11 @@ modelsummary::modelsummary(
 )
 ```
 
-
-
-
 # Discussion
 
 ## First discussion point {#sec-first-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this.
 
 ## Second discussion point
 
@@ -151,8 +145,7 @@ Weaknesses and next steps should also be included.
 
 \appendix
 
-# Appendix {-}
-
+# Appendix {.unnumbered}
 
 # Additional data details
 
@@ -162,7 +155,7 @@ Weaknesses and next steps should also be included.
 
 In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows...
 
 ```{r}
 #| eval: true
@@ -197,12 +190,10 @@ plot(first_model, "trace")
 plot(first_model, "rhat")
 ```
 
-
-
 \newpage
 
-
 # References
+
 ---
 nocite: '@*'
 ---
