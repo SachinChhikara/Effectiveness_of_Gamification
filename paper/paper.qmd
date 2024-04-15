@@ -27,13 +27,19 @@ Games have been part of human history for a long time and are loved by many youn
 
 In this paper, we are doing replication of a study ... , which has a control and treatment where the treatment is applied gamification, while the control is using an ordinary education system. Yeah there benefits, but there are downside when comes to how the gamification as it might discourage learning. Furthermore, an wide use application of gamification is a language learning app called Duolingo, which has ... active users and this app learning is recognized in certain Universities as legitimate English learning.So we examine game design that are use. Ways to apply gamification in daily lives, like this app called Habitica: Gamify your tasks.
 
-# Data {#sec-data}
+# Data
+
+## 2.1 Background of Original Study
 
 The original study used 379 undergraduates for their experiments and there were randomly assigned into 5 groups Control, Educational game, Gamification Plugin, Social networking website, Social gamified networking website. The experiment was carried out on 10-week first year undergraduate class called ‘Qualification for ICT Users’ with hybrid learning. This course is an introduction to basic computing concepts such as word processing, spreadsheets, presentations and databases. There is an assignment for each of these four concepts which focus on testing practical skills. While, the final examination is cumulative and focus on testing conceptual knowledge.
 
 Students have lecture every two weeks and must work independently rest of the work to learn then material. Supplementary learning material was provided such as videos and communication tools in learning material platform.
 
 The control group just use what was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (fig 1) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (fig 2) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(fig 3). A summary of the groups features and potential benefits (fig 4). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
+
+## 2.2 Data Cleaning Procedure
+
+For our replication, we drop 20 rows of data from the original dataset provided since those rows contained missing data on grades of some assessments and final examination. The age row was removed since in the original study it mention that there age range for each group but in the dataset provided they made every value in that column to 19 since that the average age in the study.
 
 ```{r}
 #| label: fig-bills
@@ -129,7 +135,7 @@ modelsummary::modelsummary(
 
 # Discussion
 
-## First discussion point {#sec-first-point}
+## First discussion point
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this.
 
@@ -149,7 +155,7 @@ Weaknesses and next steps should also be included.
 
 # Additional data details
 
-# Model details {#sec-model-details}
+# Model details
 
 ## Posterior predictive check
 
