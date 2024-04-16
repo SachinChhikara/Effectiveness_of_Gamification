@@ -31,6 +31,8 @@ In this paper, we are doing replication of a study ... , which has a control and
 
 ## Data Source
 
+This paper reproduces the result from @DEMARCOS2017155. This paper will provided a overview of the data used in that study. For more detailed explanation of the data please visit the original study(insert link). 
+
 ## Methodology
 
 The original study used 379 undergraduates for their experiments and there were randomly assigned into 5 groups Control(N=76), Educational game(N=75), Gamification Plugin(N=77), Social networking website(N=75), Social gamified networking website(N=76). The experiment was carried out on 10-week first year undergraduate class called ‘Qualification for ICT Users’ with hybrid learning. This course is an introduction to basic computing concepts such as word processing, spreadsheets, presentations and databases. There is an assignment for each of these four concepts which focus on testing practical skills. While, the final examination is cumulative and focus on testing conceptual knowledge.
@@ -107,7 +109,7 @@ htmltools::includeHTML(file.path(here::here(),"other/tables/table2.html"))
 htmltools::includeHTML(file.path(here::here(),"other/tables/table3.html"))
 ```
 
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+The results from pretest(@tb-pretest) are pretty such the same for each group which aligns with the fact that this study was given before the experiment began. 
 
 ```{r}
 #| label: fig-planes
