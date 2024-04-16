@@ -110,16 +110,27 @@ htmltools::includeHTML(file.path(here::here(),"other/tables/table3.html"))
 ```
 The variables that are we are interested in seeing if share a relationship is posttest of Word Processing, Spreadsheets, Presentations, Databases and final examination. And we are interested in seeing the difference between the pretest(@tb-pretest) and posttest(@tb-posttest) and how each group is affect by the experiment. 
 
-The results from pretest(@tb-pretest) are pretty such the same for each group which aligns with the fact that this study was given before the experiment began. When looking at the posttest results, the control group is lagging behind the other groups, especially in word processing, spreadsheets and databases.  
+The results from pretest(@tb-pretest) are pretty such the same for each group which aligns with the fact that this study was given before the experiment began. When looking at the post test results(@fig-boxplot), the control group is lagging behind the other groups, especially in word processing, spreadsheets and databases.  
 
-In word processing posttest, the group that perform the best were the social network and social gamifcation and roughly having the same performance. And then followed by educational game and gamification plugin. So it seems for word processing that groups with social elements are performing better than the group with game elements.
+In word processing post test(@fig-boxplot), the group that perform the best were the social network and social gamifcation and roughly having the same performance. And then followed by educational game and gamification plugin. So it seems for word processing that groups with social elements are performing better than the group with game elements.
 
-In spreadsheets posttest, the group that perform the best was the social gamification, while the other three groups perform about the same and was only little bit behind social gamification.
+In spreadsheets post test(@fig-boxplot), the group that perform the best was the social gamification, while the other three groups perform about the same and was only little bit behind social gamification.
 
-In presentations posttest, the group that perform the best was the educational game and not far behind was social network and gamification plugin. Surprisingly, social gamification was behind those three groups, as it would seem that the combination of social and game elements would make better than social network and gamification plugin. 
+In presentations post test(@fig-boxplot), the group that perform the best was the educational game and not far behind was social network and gamification plugin. Surprisingly, social gamification was behind those three groups, as it would seem that the combination of social and game elements would make better than social network and gamification plugin. 
 
-In database posttest, the educational game performed as worse the control group. And similarly to the presentation posttest the social gamification does worse than the social network and gamification plugin. And gamification plugin does slightly better than social network.
+In database post test(@fig-boxplot), the educational game performed as worse the control group. And similarly to the presentation posttest the social gamification does worse than the social network and gamification plugin. And gamification plugin does slightly better than social network.
 
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| label: fig-boxplot
+#| fig-cap: "Boxplot showing the results of the post test for control and experiment groups "
+knitr::include_graphics(file.path(here::here(),"other/figures/figure5.png")) 
+
+```
 
 
 
@@ -134,8 +145,6 @@ analysis_data <- read_parquet(here::here("data/analysis_data/analysis_data.parqu
 
 
 ```
-
-Talk way more about it.
 
 # Model
 

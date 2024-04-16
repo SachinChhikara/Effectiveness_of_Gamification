@@ -100,31 +100,34 @@ plot1 <- ggplot(analysis_data, aes(x = Group, y = WordProcPosttest, color = Grou
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Word Processing") +
-  theme(axis.text.x = element_blank())
+  scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
+
+
 
 plot2 <- ggplot(analysis_data, aes(x = Group, y = SpreadsheetsPosttest, color = Group)) +
   geom_boxplot() +
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Presentations") +
-  theme(axis.text.x = element_blank())
+  scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
 
 plot3 <- ggplot(analysis_data, aes(x = Group, y = PresentationPosttest, color = Group)) +
   geom_boxplot() +
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Word Processing") +
-  theme(axis.text.x = element_blank())
+  scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
+  
 
 plot4 <- ggplot(analysis_data, aes(x = Group, y = DatabasesPosttest, color = Group)) +
   geom_boxplot() +
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Databases") +
-  theme(axis.text.x = element_blank())
+  scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
 
 fig5 <- grid.arrange(plot1, plot2, plot3, plot4, nrow = 2, ncol = 2)
-ggsave("other/figures/figure5.png", width = 10, height = 8, fig5) 
+ggsave("other/figures/figure5.png", width = 15, height = 8, fig5) 
 
 #Figure 6
 fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group)) +
@@ -132,6 +135,6 @@ fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group
   geom_point() +
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Final Examination Grade") +
-  theme(axis.text.x = element_blank())
+  scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
 
 ggsave("other/figures/figure6.png", fig6)
