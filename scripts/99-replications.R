@@ -77,15 +77,16 @@ w2_stats <- summarize_column_stats(analysis_data, WordProcPosttest)
 s2_stats <- summarize_column_stats(analysis_data, SpreadsheetsPosttest)
 p2_stats <- summarize_column_stats(analysis_data, PresentationPosttest)
 d2_stats <- summarize_column_stats(analysis_data, DatabasesPosttest)
+exam_stats <- summarize_column_stats(analysis_data, FinalExamination)
 
 
 table3 <- data.frame(
-  Evaluation_item = rep(c("Word Processing", "Spreadsheets", "Presentations", "Databases"), each = 5),
-  Group = rep(c("Control", "Ed. Game", "Gamification", "Social", "Social Gamif."), 4),
-  N = rep(value_counts, 4),
-  Mean = c(w2_stats$mean, s2_stats$mean, p2_stats$mean, d2_stats$mean),
-  Std_err = c(w2_stats$se, s2_stats$se, p2_stats$se, d2_stats$se),
-  Std_dev = c(w2_stats$sd, s2_stats$sd, p2_stats$sd, d2_stats$sd)
+  Evaluation_item = rep(c("Word Processing", "Spreadsheets", "Presentations", "Databases", "Final Examination"), each = 5),
+  Group = rep(c("Control", "Ed. Game", "Gamification", "Social", "Social Gamif."), 5),
+  N = rep(value_counts, 5),
+  Mean = c(w2_stats$mean, s2_stats$mean, p2_stats$mean, d2_stats$mean, exam_stats$mean),
+  Std_err = c(w2_stats$se, s2_stats$se, p2_stats$se, d2_stats$se, exam_stats$se),
+  Std_dev = c(w2_stats$sd, s2_stats$sd, p2_stats$sd, d2_stats$sd, exam_stats$sd)
 )
 
 # Saves the table to an html file
