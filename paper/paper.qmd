@@ -37,7 +37,7 @@ The original study used 379 undergraduates for their experiments and there were 
 
 Students have lecture every two weeks and must work independently rest of the work to learn then material. Supplementary learning material was provided such as videos and communication tools in learning material platform.
 
-The control group just use what was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (@fig-Gamification-plugin) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (@fig-social_network) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(@fig-social_gamification). A summary of the groups features and potential benefits (table 1). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
+The control group just use what was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (@fig-Gamification-plugin) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (@fig-social_network) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(@fig-social_gamification). A summary of the groups features and potential benefits(@tb-summary-group). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
 
 ```{r}
 #| echo: false
@@ -67,13 +67,14 @@ knitr::include_graphics(file.path(here::here(),"other/figures/figure2.jpg"))
 knitr::include_graphics(file.path(here::here(),"other/figures/figure3.jpg")) 
 ```
 ```{r}
-#| echo: false
 #| eval: true
-#| warning: false
+#| echo: false
 #| message: false
-#| label: fig-social_gamification
-#| table-cap: "Social gamification website: Gamification tools (left), dashboard (top-right) & leaderboard (bottom-right)."
-knitr::include_graphics(file.path(here::here(),"other/tables/table1.jpg")) 
+#| warning: false
+#| label: tb-summary-group
+#| tbl-cap: "Summary of the groups used, their features and potential benefits."
+
+htmltools::includeHTML(file.path(here::here(),"other/tables/table1.html"))
 ```
 
 ## Data Cleaning Procedure
@@ -85,20 +86,26 @@ This dataset was chosen since my many studies in gamification don't have easy ac
 ## Data Visualization
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
+#| eval: true
 #| echo: false
+#| message: false
+#| warning: false
+#| label: tb-pretest
+#| tbl-cap: "The results of the pretest."
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+htmltools::includeHTML(file.path(here::here(),"other/tables/table2.html"))
 ```
 
-Talk more about it.
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tb-posttest
+#| tbl-cap: "The results of the posttest."
+
+htmltools::includeHTML(file.path(here::here(),"other/tables/table3.html"))
+```
 
 And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
 

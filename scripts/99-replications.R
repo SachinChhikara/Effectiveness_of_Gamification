@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Models whether we guess right based off of our confidence
+# Purpose: Replicates the tables and figures used in original study
 # Author: Sachin Chhikara
 # Date: 11 April 2024 
 # Contact: sachin.chhikarar@utoronto.ca
@@ -34,6 +34,20 @@ summarize_column_stats <- function(data, column_name) {
 
 
 #### Tables ####
+# Table 1
+
+# Note: This table was used in original study, but the table code was not provided.
+# So replicate it, we took a screenshot of the table and told chatgpt to create this table.
+table1 <- data.frame(
+  Instrument = c("Educational game", "Gamification plugin", "Social networking website", "Social gamification website"),
+  Features = c("Challenges, levels, points, narrative", "Trophies, badges, challenges, leaderboard", "Blogging, questions & answers, liking, friends, built-in twitter, dashboard", "Blogging, questions & answers, liking, friends, built-in twitter, dashboard, challenges, points, achievements, virtual currency, shop, external rewarding, personalization (status/visibility), peer review"),
+  `Approach & targeted benefits` = c("Not aligned with learning objectives Independent work & exploration of students", "Competition-driven Motivate participation through comparison with peers", "Cooperation and communication among participants. Boost participation, collaborative work & community building Promote student-driven discussion", "Competition and cooperation Boost participation, collaborative work & community building Motivate participation through comparison with peers Social interaction affords additional means to motivate participation and engagement Addressing needs of different students (player types) and widen participation")
+)
+
+# Saves the table to an html file
+table_html <- kable(table1, format = "html", escape = FALSE)
+writeLines(table_html, "other/tables/table1.html")
+
 
 # Table 2
 #pretest stats
@@ -43,7 +57,7 @@ p_stats <- summarize_column_stats(analysis_data, PresentationPretest)
 d_stats <- summarize_column_stats(analysis_data, DatabasesPretest)
   
 
-data <- data.frame(
+table2 <- data.frame(
   Evaluation_item = rep(c("Word Processing", "Spreadsheets", "Presentations", "Databases"), each = 5),
   Group = rep(c("Control", "Ed. Game", "Gamification", "Social", "Social Gamif."), 4),
   N = rep(value_counts, 4),
@@ -51,6 +65,10 @@ data <- data.frame(
   Std_err = c(w_stats$se, s_stats$se, p_stats$se, d_stats$se),
   Std_dev = c(w_stats$sd, s_stats$sd, p_stats$sd, d_stats$sd)
 )
+
+# Saves the table to an html file
+table_html <- kable(table2, format = "html", escape = FALSE)
+writeLines(table_html, "other/tables/table2.html")
 
 # Table 3
 
@@ -61,7 +79,7 @@ p2_stats <- summarize_column_stats(analysis_data, PresentationPosttest)
 d2_stats <- summarize_column_stats(analysis_data, DatabasesPosttest)
 
 
-data2 <- data.frame(
+table3 <- data.frame(
   Evaluation_item = rep(c("Word Processing", "Spreadsheets", "Presentations", "Databases"), each = 5),
   Group = rep(c("Control", "Ed. Game", "Gamification", "Social", "Social Gamif."), 4),
   N = rep(value_counts, 4),
@@ -69,6 +87,10 @@ data2 <- data.frame(
   Std_err = c(w2_stats$se, s2_stats$se, p2_stats$se, d2_stats$se),
   Std_dev = c(w2_stats$sd, s2_stats$sd, p2_stats$sd, d2_stats$sd)
 )
+
+# Saves the table to an html file
+table_html <- kable(table3, format = "html", escape = FALSE)
+writeLines(table_html, "other/tables/table3.html")
 
 ### Figures ###
 #Figure 5
