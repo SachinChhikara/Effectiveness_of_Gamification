@@ -157,10 +157,9 @@ Define $y_i$ as the the final examination mark, which is a number 0 and 100. $be
 ```{=tex}
 \begin{align} 
 y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \beta_0 + \beta_1 \times \mbox{group}_i + \beta_2 \times \mbox{Gender}_i\\
+\mu_i &= \beta_0 + \beta_1 \times \mbox{Group}_i \times \mbox{Gender}_i\\
 \beta_0 &\sim \mbox{Normal}(0, 2.5) \\
 \beta_1 &\sim \mbox{Normal}(0, 2.5) \\
-\beta_2 &\sim \mbox{Normal}(0, 2.5) \\
 \sigma &\sim \mbox{Exponential}(1)
 \end{align}
 ```
@@ -168,9 +167,7 @@ We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use
 
 ### Model justification
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
+We used normal distribution for this model since our sample size was big enough(over 300 sample points), this allows to use the central limit theorem. We pick variable Group because we want to see how each experiment group hold up against our control group and we want to see if the game elements and social elements improve academic performance. We pick the gender variable since we want to see if there is a learning method that is more preferred by one gender over the other.
 
 # Results
 
