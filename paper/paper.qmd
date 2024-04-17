@@ -148,21 +148,19 @@ knitr::include_graphics(file.path(here::here(),"other/figures/figure5.png"))
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+Here we briefly describe the Bayesian analysis model used to investigate final examination marks and how it is influence by the group chosen for the student and the gender of the student. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.
+Define $y_i$ as the the final examination mark, which is a number 0 and 100. $beta_0$ is the intercept and it is the expected value of the control group. $group_i$ is defined as the experiment groups: educational game, gamification plugin, social network and social gamification. $gender_i$ is defined is binary value that is either male or female.
 
 ```{=tex}
 \begin{align} 
 y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
+\mu_i &= \beta_0 + \beta_1 \times \mbox{group}_i + \beta_2 \times \mbox{Gender}_i\\
+\beta_0 &\sim \mbox{Normal}(0, 2.5) \\
+\beta_1 &\sim \mbox{Normal}(0, 2.5) \\
+\beta_2 &\sim \mbox{Normal}(0, 2.5) \\
 \sigma &\sim \mbox{Exponential}(1)
 \end{align}
 ```
@@ -187,7 +185,7 @@ Our results are summarized in @tbl-modelresults.
 library(rstanarm)
 
 first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+  readRDS(file = here::here("models/final_exam.rds"))
 ```
 
 ```{r}

@@ -28,5 +28,5 @@ FinalExam_model <-
 #### Save model ####
 saveRDS(
   FinalExam_model,
-  file = "models/first_model.rds"
+  file = "models/final_exam.rds"
 )
