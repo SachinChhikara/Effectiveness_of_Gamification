@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Replicates the tables and figures used in original study
+# Purpose: Replicates the tables and figures used in original study: https://www.sciencedirect.com/science/article/abs/pii/S0360131515300981
 # Author: Sachin Chhikara
 # Date: 11 April 2024 
 # Contact: sachin.chhikarar@utoronto.ca
@@ -94,7 +94,7 @@ table_html <- kable(table3, format = "html", escape = FALSE)
 writeLines(table_html, "other/tables/table3.html")
 
 ### Figures ###
-#Figure 5
+#Replication of Figure 5 from the orginal study
 plot1 <- ggplot(analysis_data, aes(x = Group, y = WordProcPosttest, color = Group)) +
   geom_boxplot() +
   geom_point() +
@@ -127,9 +127,9 @@ plot4 <- ggplot(analysis_data, aes(x = Group, y = DatabasesPosttest, color = Gro
   scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
 
 fig5 <- grid.arrange(plot1, plot2, plot3, plot4, nrow = 2, ncol = 2)
-ggsave("other/figures/figure5.png", width = 15, height = 8, fig5) 
+ggsave("other/figures/figure4.png", width = 15, height = 8, fig5) 
 
-#Figure 6
+#Replication of Figure 6 from the original study
 fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group)) +
   geom_boxplot() +
   geom_point() +
@@ -137,4 +137,6 @@ fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group
   labs(x = "Group Type", y = "Final Examination Grade") +
   scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
 
-ggsave("other/figures/figure6.png", fig6)
+print(fig6)
+
+ggsave("other/figures/figure5.png", width = 7, height = 5 ,fig6)
