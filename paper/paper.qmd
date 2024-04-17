@@ -170,8 +170,8 @@ We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use
 We used normal distribution for this model since our sample size was big enough(over 300 sample points), this allows to use the central limit theorem. We pick variable Group because we want to see how each experiment group hold up against our control group and we want to see if the game elements and social elements improve academic performance. We pick the gender variable since we want to see if there is a learning method that is more preferred by one gender over the other.
 
 # Results
+Our results are summarized in @tbl-modelresults. Social gamification group grades are almost comparable to the control group as on average they tend to be lower by 1-2%. While, a student in the educational game group, their grades on average are 6-7% lower than the control group. And then, a student in social network group, their grades on average 11-12% lower than the control group. Lastly, a student in the gamification plugin group, their grades on average are 15-16% lower than the control group.
 
-Our results are summarized in @tbl-modelresults.
 
 ```{r}
 #| echo: false
@@ -181,7 +181,7 @@ Our results are summarized in @tbl-modelresults.
 
 library(rstanarm)
 
-first_model <-
+finalExam_model <-
   readRDS(file = here::here("models/final_exam.rds"))
 ```
 
@@ -189,12 +189,12 @@ first_model <-
 #| echo: false
 #| eval: true
 #| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| tbl-cap: "Explanatory models of Final Exam marks based off of the experiment group and gender"
 #| warning: false
 
 modelsummary::modelsummary(
   list(
-    "First model" = first_model
+    "Final Exam Marks" = finalExam_model
   ),
   statistic = "mad",
   fmt = 2
@@ -203,13 +203,13 @@ modelsummary::modelsummary(
 
 # Discussion
 
-## First discussion point
+## Design of Gamification
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this.
 
-## Second discussion point
+## Good example of Gamification
 
-## Third discussion point
+## Student's opinon about it 
 
 ## Weaknesses and next steps
 
@@ -257,11 +257,10 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| label: fig-stanareyouokay
 #| fig-cap: "Checking the convergence of the MCMC algorithm"
 #| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
 
-plot(first_model, "trace")
+plot(finalExam_model, "trace")
 
-plot(first_model, "rhat")
+plot(finalExam_model, "rhat")
 ```
 
 \newpage

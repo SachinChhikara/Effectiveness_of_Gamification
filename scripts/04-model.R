@@ -25,8 +25,6 @@ FinalExam_model <-
     seed = 853
   )
 
-modelsummary(FinalExam_model)
-
 #### Save model ####
 saveRDS(
   FinalExam_model,
