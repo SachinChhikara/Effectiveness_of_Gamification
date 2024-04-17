@@ -35,11 +35,11 @@ This paper reproduces the result from called "On the effectiveness of game-like 
 
 ## Methodology
 
-The original study used 379 undergraduates for their experiments and there were randomly assigned into 5 groups Control(N=76), Educational game(N=75), Gamification Plugin(N=77), Social networking website(N=75), Social gamified networking website(N=76). The experiment was carried out on 10-week first year undergraduate class called ‘Qualification for ICT Users’ with hybrid learning. This course is an introduction to basic computing concepts such as word processing, spreadsheets, presentations and databases. There is an assignment for each of these four concepts which focus on testing practical skills. While, the final examination is cumulative and focus on testing conceptual knowledge.
+The original study used 379 undergraduates for their experiments and there were randomly assigned into 5 groups Control(N=76), Educational game(N=75), Gamification Plugin(N=77), Social networking website(N=75), Social gamified networking website(N=76). The experiment was carried out on 10-week first year undergraduate class called ‘Qualification for ICT Users’ with blended learning. This course is an introduction to basic computing concepts such as word processing, spreadsheets, presentations and databases. 
 
-Students have lecture every two weeks and must work independently rest of the work to learn then material. Supplementary learning material was provided such as videos and communication tools in learning material platform.
+In this experiment, before applying the corresponding learning methods, the students take a pretest, which occurs in week 1. And through week 2-9, depending on the group the student was assigned they learn using that specific method. During those weeks, they were assigned four assignments(aka post tests) on week 3, 5, 7 and 9. In addition, these assignments are on word processing, spreadsheets, presentations and databases, which tests students on practical skills. Finally, there is cumulative final exam and tests students on conceptual knowledge.
 
-The control group just use what was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (@fig-Gamification-plugin) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (@fig-social_network) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(@fig-social_gamification). A summary of the groups features and potential benefits(@tbl-summary-group). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
+All groups had students have lecture every two weeks and must work independently rest of the work to learn then material using their respective method. In addition, Supplementary learning material was provided such as videos and communication tools in learning material platform. The control group just use traditional e-learning approach that was mention above. Educational game used was called Ribbonhero offered by Microsoft as as free download to download Software, and player plays as virtual character Clippy and must overcome six challenges with increasing difficulty. Gamification plugin (@fig-Gamification-plugin) is integrated in the institutional management system where there are challenges, trophies/badges and a leader board. Social Networking website was run on a open source engine, Elgg (@fig-social_network) and it functions very similar to social media where students can share their thoughts, make friends and discuss the material in class. Social gamified networking website use the same engine as the previous group and having similar features to Gamification plugin(@fig-social_gamification). A summary of the groups features and potential benefits(@tbl-summary-group). The study highlights that the educational game is not necessarily aligned with the learning goals, while the gamification used in this study was.
 
 ```{r}
 #| echo: false
@@ -76,12 +76,13 @@ knitr::include_graphics(file.path(here::here(),"other/figures/figure3.jpg"))
 #| label: tbl-summary-group
 #| tbl-cap: "Summary of the groups used, their features and potential benefits."
 
-htmltools::includeHTML(file.path(here::here(),"other/tables/table1.html"))
+knitr::include_graphics(file.path(here::here(),"other/tables/table1.jpg"))
 ```
 
-## Data Cleaning Procedure
+## Variables of Interest and Data Cleaning Procedure
+The variables used in this study are Group, Gender, pretest and post test for Word Processing, Spreadsheets, Presentation, Databases and FinalExamination. Pretest, post test and FinalExamination use the measurement of a grade, which is from 0 - 100%.
 
-For our replication, we drop 20 rows of data from the original dataset provided since those rows contained missing data on grades of some assessments and final examination. The age row was removed since in the original study it mention that there age range for each group but in the dataset provided they made every value in that column to 19 since that the average age in the study. To summarize, the size of the dataset we use in this replication is N = 359(Control=75, Game=66, Plugin=73, Social Network=74, Social Gamification=71).
+For our replication, we drop 20 rows of data from the original dataset provided since those rows contained missing data on grades of some assessments and final examination. The age row was removed since in the original study it mention that there age range for each group but in the dataset provided they made every value in that column to 19 since that the average age in the study. To summarize, the size of the dataset we use in this replication is N = 359(Control=75, Game=66, Plugin=73, Social Network=74, Social Gamification=71). 
 
 This dataset was chosen since my many studies in gamification don't have easy access to their datasets. In addition, this dataset includes control and treatment group which is useful for examining the difference between a traditional education system and gamification.
 
@@ -203,13 +204,13 @@ modelsummary::modelsummary(
 
 # Discussion
 
-## Design of Gamification
+## Is Gamification effective? Does it have pontential to change the educational system?
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this.
 
-## Good example of Gamification
+## Design of Gamification
 
-## Student's opinon about it 
+## Student's input
 
 ## Weaknesses and next steps
 

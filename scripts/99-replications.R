@@ -34,20 +34,6 @@ summarize_column_stats <- function(data, column_name) {
 
 
 #### Tables ####
-# Table 1
-
-# Note: This table was used in original study, but the table code was not provided.
-# So replicate it, we took a screenshot of the table and told chatgpt to create this table.
-table1 <- data.frame(
-  Instrument = c("Educational game", "Gamification plugin", "Social networking website", "Social gamification website"),
-  Features = c("Challenges, levels, points, narrative", "Trophies, badges, challenges, leaderboard", "Blogging, questions & answers, liking, friends, built-in twitter, dashboard", "Blogging, questions & answers, liking, friends, built-in twitter, dashboard, challenges, points, achievements, virtual currency, shop, external rewarding, personalization (status/visibility), peer review"),
-  `Approach & targeted benefits` = c("Not aligned with learning objectives Independent work & exploration of students", "Competition-driven Motivate participation through comparison with peers", "Cooperation and communication among participants. Boost participation, collaborative work & community building Promote student-driven discussion", "Competition and cooperation Boost participation, collaborative work & community building Motivate participation through comparison with peers Social interaction affords additional means to motivate participation and engagement Addressing needs of different students (player types) and widen participation")
-)
-
-# Saves the table to an html file
-table_html <- kable(table1, format = "html", escape = FALSE)
-writeLines(table_html, "other/tables/table1.html")
-
 
 # Table 2
 #pretest stats
@@ -136,7 +122,5 @@ fig6 <- ggplot(analysis_data, aes(x = Group, y = FinalExamination, color = Group
   geom_jitter(alpha = 0.3, width = 0.15, height = 0) +
   labs(x = "Group Type", y = "Final Examination Grade") +
   scale_x_discrete(labels = c('Control', 'Ed. game', 'Gamif.', 'Social', 'Soc. Gamif.'))
-
-print(fig6)
 
 ggsave("other/figures/figure5.png", width = 7, height = 5 ,fig6)
