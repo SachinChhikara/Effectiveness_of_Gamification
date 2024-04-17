@@ -16,7 +16,7 @@ analysis_data <- read_parquet(file = "data/analysis_data/analysis_data.parquet")
 
 FinalExam_model <-
   stan_glm( 
-    formula = FinalExamination ~ Group + Gender,
+    formula = FinalExamination ~ Group * Gender,
     data = analysis_data,
     family = gaussian(),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
@@ -24,6 +24,8 @@ FinalExam_model <-
     prior_aux = exponential(rate = 1, autoscale = TRUE),
     seed = 853
   )
+
+modelsummary(FinalExam_model)
 
 #### Save model ####
 saveRDS(
