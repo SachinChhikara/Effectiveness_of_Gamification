@@ -5,6 +5,9 @@
 Analysis whether Gamification is effective in education and real life 
 application of it. 
 
+## Link to Replication through SSRP (Social Science Replication Platform)
+
+https://www.socialsciencereproduction.org/reproductions/b4c885a1-7258-49c8-b368-599267d28ff0/index
 
 ## File Structure
 
