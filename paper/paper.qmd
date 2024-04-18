@@ -86,67 +86,6 @@ For our replication, we drop 20 rows of data from the original dataset provided 
 
 This dataset was chosen since my many studies in gamification don't have easy access to their datasets. In addition, this dataset includes control and treatment group which is useful for examining the difference between a traditional education system and gamification.
 
-## Data Visualization
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-pretest
-#| tbl-cap: "The results of the pretest."
-
-htmltools::includeHTML(file.path(here::here(),"other/tables/table2.html"))
-```
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-posttest
-#| tbl-cap: "The results of the posttest."
-
-htmltools::includeHTML(file.path(here::here(),"other/tables/table3.html"))
-```
-The variables that are we are interested in seeing if share a relationship is posttest of Word Processing, Spreadsheets, Presentations, Databases and final examination. And we are interested in seeing the difference between the pretest(@tbl-pretest) and posttest(@tbl-posttest) and how each group is affect by the experiment. 
-
-The results from pretest(@tbl-pretest) are pretty such the same for each group which aligns with the fact that this study was given before the experiment began. When looking at the post test results(@fig-boxplot), the control group is lagging behind the other groups, especially in word processing, spreadsheets and databases.  
-
-In word processing post test(@fig-boxplot), the group that perform the best were the social network and social gamifcation and roughly having the same performance. And then followed by educational game and gamification plugin. So it seems for word processing that groups with social elements are performing better than the group with game elements.
-
-In spreadsheets post test(@fig-boxplot), the group that perform the best was the social gamification, while the other three groups perform about the same and was only little bit behind social gamification.
-
-In presentations post test(@fig-boxplot), the group that perform the best was the educational game and not far behind was social network and gamification plugin. Surprisingly, social gamification was behind those three groups, as it would seem that the combination of social and game elements would make better than social network and gamification plugin. 
-
-In database post test(@fig-boxplot), the educational game performed as worse the control group. And similarly to the presentation posttest the social gamification group does worse than the social network and gamification plugin. And gamification plugin does slightly better than social network.
-
-For the final examination(@fig-final-examination), interestingly enough, the group with the best results was the control group. Followed closely, by the social network group and then Educational game group. So the groups that performed the worse was gamfication plugin group and social gamfication group. 
-
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-#| label: fig-boxplot
-#| fig-cap: "Boxplot showing the results of the post test for control and experiment groups "
-knitr::include_graphics(file.path(here::here(),"other/figures/figure4.png")) 
-
-```
-
-
-
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-#| label: fig-final-examination
-#| fig-cap: "Boxplot showing the results of the final examination for each group that particapte in this experiment"
-knitr::include_graphics(file.path(here::here(),"other/figures/figure5.png")) 
-
-```
-
 # Model
 
 Here we briefly describe the Bayesian analysis model used to investigate final examination marks and how it is influence by the group chosen for the student and the gender of the student. Background details and diagnostics are included in [Appendix -@sec-model-details].
@@ -171,8 +110,64 @@ We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use
 We used normal distribution for this model since our sample size was big enough(over 300 sample points), this allows to use the central limit theorem. We pick variable Group because we want to see how each experiment group hold up against our control group and we want to see if the game elements and social elements improve academic performance. We pick the gender variable since we want to see if there is a learning method that is more preferred by one gender over the other.
 
 # Results
-Our results are summarized in @tbl-modelresults. Social gamification group grades are almost comparable to the control group as on average they tend to be lower by 1-2%. While, a student in the educational game group, their grades on average are 6-7% lower than the control group. And then, a student in social network group, their grades on average 11-12% lower than the control group. Lastly, a student in the gamification plugin group, their grades on average are 15-16% lower than the control group.
 
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-pretest
+#| tbl-cap: "The results of the pretest."
+
+htmltools::includeHTML(file.path(here::here(),"other/tables/table2.html"))
+```
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-posttest
+#| tbl-cap: "The results of the posttest."
+
+htmltools::includeHTML(file.path(here::here(),"other/tables/table3.html"))
+```
+
+The results from pretest(@tbl-pretest) are pretty such the same for each group which aligns with the fact that this study was given before the experiment began. When looking at the post test results(@fig-boxplot), the control group is lagging behind the other groups, especially in word processing, spreadsheets and databases.  
+
+In word processing post test(@fig-boxplot), the group that perform the best were the social network and social gamifcation and roughly having the same performance. And then followed by educational game and gamification plugin. So it seems for word processing that groups with social elements are performing better than the group with game elements.
+
+In spreadsheets post test(@fig-boxplot), the group that perform the best was the social gamification, while the other three groups perform about the same and was only little bit behind social gamification.
+
+In presentations post test(@fig-boxplot), the group that perform the best was the educational game and not far behind was social network and gamification plugin. Surprisingly, social gamification was behind those three groups, as it would seem that the combination of social and game elements would make better than social network and gamification plugin. 
+
+In database post test(@fig-boxplot), the educational game performed as worse the control group. And similarly to the presentation posttest the social gamification group does worse than the social network and gamification plugin. And gamification plugin does slightly better than social network.
+
+For the final examination(@fig-final-examination), interestingly enough, the group with the best results was the control group. Followed closely, by the social network group and then Educational game group. So the groups that performed the worse was gamfication plugin group and social gamfication group. 
+
+Our model results are summarized in @tbl-modelresults. Social gamification group grades are almost comparable to the control group as on average they tend to be lower by 1-2%. While, a student in the educational game group, their grades on average are 6-7% lower than the control group. And then, a student in social network group, their grades on average 11-12% lower than the control group. Lastly, a student in the gamification plugin group, their grades on average are 15-16% lower than the control group.
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| label: fig-boxplot
+#| fig-cap: "Boxplot showing the results of the post test for control and experiment groups "
+knitr::include_graphics(file.path(here::here(),"other/figures/figure4.png")) 
+
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| label: fig-final-examination
+#| fig-cap: "Boxplot showing the results of the final examination for each group that particapte in this experiment"
+knitr::include_graphics(file.path(here::here(),"other/figures/figure5.png")) 
+
+```
 
 ```{r}
 #| echo: false
