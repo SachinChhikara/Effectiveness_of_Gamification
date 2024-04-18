@@ -205,10 +205,11 @@ modelsummary::modelsummary(
 
 First, let us take a look at post test(@tbl-posttest) table again, recall that social gamification and social network does the best at word processing. Furthermore, social gamification does the best at spreadsheets as well. In addition, educational game does the best in presentations and gamification plugin does the best in databases. Notice that for post test, the best groups in each assessment seems to be related to groups that have game elements. Another thing to highlight is that social network group when comes to post tests tend to always be in top three groups. And social gamifcation is the best in 2/4 post tests. So it so seems that groups with social elements also perform well. 
 
+Gamification is not effective as we anticipated as seen in the final exam marks where the control group did the best. But, when comes to post tests as we note earlier groups with game elements were doing the best. And even for final examination social gamification was doing almost as good as the control group. From this study, we can conclude that gamification may not be good as we hope but it has potential to be better than traditional education. While, from our study we found males perform slightly better than females, the difference is pretty small(2-4%), which is good since both males and females can benefit equally from gamification. Furthermore, in order to improve gamification we will need to look at two things the design and student's feedback.
 
 ## Design of Gamification
 
-## Student's input
+## Student's feedback
 
 ## Weaknesses and next steps
 
