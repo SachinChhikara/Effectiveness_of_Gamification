@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Simulates Postive effects of Gamification
 # Author: Sachin Chhikara
-# Date: 26 March 2024 
+# Date: 26 March 2024
 # Contact: sachin.chhikarar@utoronto.ca
 # License: MIT
 
@@ -46,12 +46,9 @@ data %>%
   gather(key = "Variable", value = "Value", -Gender) %>%
   ggplot(aes(x = Value, fill = Gender)) +
   geom_histogram(binwidth = 5, position = "dodge", alpha = 0.7) +
-  facet_wrap(~ Variable, scales = "free") +
-  labs(title = "Comparison of Male and Female",
-       x = "Value", y = "Frequency") +
+  facet_wrap(~Variable, scales = "free") +
+  labs(
+    title = "Comparison of Male and Female",
+    x = "Value", y = "Frequency"
+  ) +
   theme_minimal()
-
-
-
-
-

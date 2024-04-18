@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Model created for inference about the final examination results
 # Author: Sachin Chhikara
-# Date: 12 April 2024 
+# Date: 12 April 2024
 # Contact: sachin.chhikarar@utoronto.ca
 # License: MIT
 
@@ -14,8 +14,8 @@ library(modelsummary)
 #### Read data ####
 analysis_data <- read_parquet(file = "data/analysis_data/analysis_data.parquet")
 
-FinalExam_model <-
-  stan_glm( 
+final_exam_model <-
+  stan_glm(
     formula = FinalExamination ~ Group * Gender,
     data = analysis_data,
     family = gaussian(),
@@ -27,6 +27,6 @@ FinalExam_model <-
 
 #### Save model ####
 saveRDS(
-  FinalExam_model,
+  final_exam_model,
   file = "models/final_exam.rds"
 )
