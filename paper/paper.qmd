@@ -199,9 +199,10 @@ modelsummary::modelsummary(
 
 # Discussion
 
-## Is Gamification effective? Does it have pontential to change the educational system?
+## Is Gamification effective? And is it better for male or females?
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this.
+First, let us take a look at post test(@tbl-posttest) table again, recall that social gamification and social network does the best at word processing. Furthermore, social gamification does the best at spreadsheets as well. In addition, educational game does the best in presentations and gamification plugin does the best in databases. Notice that for post test, the best groups in each assessment seems to be related to groups that have game elements. Another thing to highlight is that social network group when comes to post tests tend to always be in top three groups. And social gamifcation is the best in 2/4 post tests. So it so seems that groups with social elements also perform well. 
+
 
 ## Design of Gamification
 
