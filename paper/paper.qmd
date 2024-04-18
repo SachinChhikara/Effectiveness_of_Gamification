@@ -147,6 +147,8 @@ For the final examination(@fig-final-examination), interestingly enough, the gro
 
 Our model results are summarized in @tbl-modelresults. Social gamification group grades are almost comparable to the control group as on average they tend to be lower by 1-2%. While, a student in the educational game group, their grades on average are 6-7% lower than the control group. And then, a student in social network group, their grades on average 11-12% lower than the control group. Lastly, a student in the gamification plugin group, their grades on average are 15-16% lower than the control group.
 
+Males overall on average did better than females by 2-3%. Also, males in the gamification plugin group on average did better that females by 1-2%.  Interestingly, males do 2-4% worse than females in educational game, social gamification and social network group.   
+
 ```{r}
 #| echo: false
 #| eval: true
