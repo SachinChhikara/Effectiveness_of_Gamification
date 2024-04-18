@@ -209,6 +209,14 @@ Gamification is not effective as we anticipated as seen in the final exam marks 
 
 ## Design of Gamification
 
+Like I mentioned before gamification has to potential to change the traditional educational system, but in order to do that need to design it in a way that truly benefits the students. A leading expert in gamification and behavioral drive, Yu-kai Chou, has a create framework for gamification called the Octalysis Framework(reference to the figure in the appendix).Looking at the framework there are eight main points mention: Epic Meaning, Accomplishment, Empowerment, Ownership, Social Influence, Scarcity, Unpredictability, and Avoidance. 
+
+Let us see how this framework applies to our study, for this example we will using social gamification group, since it one of the better performing groups with game elements. Epic Meaning category it is might but some students as they believe if they do well in this course, it could lead to some future goal like their dream job. Accomplishment is achieved by the meaningful challenges provided in each module and achievements. Empowerment is achieved by peer reviews and feedback from the teacher as well. Ownership is achieved as they can customize their profiles and status. Social Influence is achieved by being able to add friends and being able to features similar to Twitter(known as X now). This study has 5 out of 8 main points mention from the framework.
+
+Another example that we want to apply this framework is on a popular gamification language learning app, called Duolingo. 
+
+
+
 ## Student's feedback
 
 ## Weaknesses and next steps
