@@ -1,9 +1,9 @@
-# Effectivness of Gamification
+# Effectivness of Gamification in Education
 
 ## Overview
 
 This is a reproduction of the study, "On the effectiveness of game-like and social approaches in learning: Comparing educational gaming, gamification & social networking".
-This analysis explores the same question as original regarding whther gamifcation is effective or not in a education context. In our paper, we take a step further and ask which gender benefits more from gamification. And this paper discusses Yu-kai Chou, The Octalysis Framework for Gamification & Behavioral Design and Duolingo.
+This analysis explores the same question as original regarding whether gamifcation is effective or not in a education context. In our paper, we take a step further and ask which gender benefits more from gamification. And this paper discusses Yu-kai Chou, The Octalysis Framework for Gamification & Behavioral Design and Duolingo.
 
 ## Link to Replication through SSRP (Social Science Replication Platform)
 
