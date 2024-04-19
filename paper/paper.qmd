@@ -85,6 +85,8 @@ knitr::include_graphics(file.path(here::here(),"other/tables/table1.jpg"))
 
 The variables used in this study are Group, Gender, pretest and post test for Word Processing, Spreadsheets, Presentation, Databases and FinalExamination. Pretest, post test and FinalExamination use the measurement of a grade, which is from 0 - 100%.
 
+The R package used for cleaning data were In this paper, the analysis is carried out using the statistical programming language `R` [@citeR], with the help of extra packages including `arrow` [@arrow], `kableExtra` [@kableExtra], `gridExtra`[@gridExtra], `knitr` [@knitr],   `modelsummary`[@modelsummary], `tidyverse` [@Tidyverse].
+
 For our replication, we drop 20 rows of data from the original dataset provided since those rows contained missing data on grades of some assessments and final examination. The age row was removed since in the original study it mention that there age range for each group but in the dataset provided they made every value in that column to 19 since that the average age in the study. To summarize, the size of the dataset we use in this replication is N = 359(Control=75, Game=66, Plugin=73, Social Network=74, Social Gamification=71). 
 
 This dataset was chosen since my many studies in gamification don't have easy access to their datasets. In addition, this dataset includes control and treatment group which is useful for examining the difference between a traditional education system and gamification.
