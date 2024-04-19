@@ -86,7 +86,7 @@ This dataset was chosen since my many studies in gamification don't have easy ac
 
 # Model
 
-Here we briefly describe the Bayesian analysis model used to investigate final examination marks and how it is influence by the group chosen for the student and the gender of the student. Background details and diagnostics are included in [Appendix -@sec-model-details].
+Here we briefly describe the Bayesian analysis model used to investigate final examination marks and how it is influence by the group chosen for the student and the gender of the student. Background details are included in [Appendix @fig-ppcheckandposteriorvsprior].
 
 ## Model set-up
 
@@ -187,6 +187,7 @@ modelsummary::modelsummary(
   fmt = 2
 )
 ```
+\newpage
 
 # Discussion
 
@@ -198,11 +199,23 @@ Gamification is not effective as we anticipated as seen in the final exam marks 
 
 ## Design of Gamification
 
-Like I mentioned before gamification has to potential to change the traditional educational system, but in order to do that need to design it in a way that truly benefits the students. A leading expert in gamification and behavioral drive, Yu-kai Chou, has a create framework for gamification called the Octalysis Framework(reference to the figure in the appendix).Looking at the framework there are eight core drives: Epic Meaning, Accomplishment, Empowerment, Ownership, Social Influence, Scarcity, Unpredictability, and Avoidance. For even more in depth explanation, please visit Yu-kai website:https://yukaichou.com/gamification-examples/octalysis-complete-gamification-framework/. 
+Like I mentioned before gamification has to potential to change the traditional educational system, but in order to do that need to design it in a way that truly benefits the students. A leading expert in gamification and behavioral drive, Yu-kai Chou, has a create framework for gamification called the Octalysis Framework(@fig-framework).Looking at the framework there are eight core drives: Epic Meaning, Accomplishment, Empowerment, Ownership, Social Influence, Scarcity, Unpredictability, and Avoidance. For even more in depth explanation, please visit Yu-kai website:https://yukaichou.com/gamification-examples/octalysis-complete-gamification-framework/. 
 
 Let us see how this framework applies to our study, for this example we will using social gamification group, since it one of the better performing groups with game elements. Epic Meaning category it is might but some students as they believe if they do well in this course, it could lead to some future goal like their dream job. Accomplishment is achieved by the meaningful challenges provided in each module and achievements. Empowerment is achieved by peer reviews and feedback from the teacher as well. Ownership is achieved as they can customize their profiles and status. Social Influence is achieved by being able to add friends and being able to features similar to Twitter(known as X now). This study has 5 out of 8 core drives mention from the framework.
 
 Another example that we want to apply this framework is on a popular gamification language learning app, called Duolingo. Duolingo is a free app that has millions of user ranging from public students in third world countries to even Hollywood stars. Yu-kai Chou website provides an analysis for Duolingo, which has 6 out of 8 elements of the framework and here I am going to highlight some of the elements. Firstly, Epic Meaning is to learn a language and the app even asks the user when creating an account what is their purpose for learning new language. Secondly, Ownership, users have a currency call Lingots which allows players to buy Power-Ups(ways to make the player stronger) such as streak freeze and to buy clothes for their player character. Lastly, it has Scarcity and Avoidance as player have a limited amount of lives and if they lose then they can no longer play for a certain of time. 
+
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| label: fig-framework
+#| fig-cap: "The Octalysis Framework for Gamification & Behavioral Design"
+knitr::include_graphics(file.path(here::here(),"other/figures/octalysis_framework.jpg")) 
+
+```
 
 ## Limations and Weaknessess
 Limitations of this dataset is that doesn't tell us how student's satisfaction, retention, motivation and engagement. This is would useful information since it will paint us better picture on the effectiveness of gamification. In addition, if students don't really like then it would be indicator whether gamification is not working or that something missing that could improve it. According to study about academic boredom (@article), some aspects of it comes from lack of motivation and learning methods, so if gamification can solve this would a huge win for students and for society at a whole. Furthermore, if students really enjoy gamification then this means this a potential valid learning method, which could convince others to fund and study further.
@@ -224,9 +237,11 @@ Like I mentioned before, this paper shows that gamification has potential to sur
 
 ## Posterior predictive check
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check.
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows...
+In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. 
+
+These two graphs to do a good job of showing that the data is properly fitted.
 
 ```{r}
 #| eval: true
@@ -238,26 +253,20 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
+analysis_data <- read_parquet(file.path(here::here(),"data/analysis_data/analysis_data.parquet"))
+
+pp_check(final_exam_model) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
+posterior_vs_prior(final_exam_model) +
+  theme_minimal() +
+  scale_color_brewer(palette = "Set1") +
+  theme(legend.position = "bottom") +
+  coord_flip()
+
 ```
 
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-
-plot(final_exam_model, "trace")
-
-plot(final_exam_model, "rhat")
 ```
 
 \newpage
