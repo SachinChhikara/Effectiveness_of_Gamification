@@ -1,11 +1,11 @@
 ---
-title: "Gamification Effectiveness on Education"
+title: "Gamification can Change the Traditonal Educational System"
 author: 
   - Sachin Chhikara
 thanks: "Code and data are available at: https://github.com/SachinChhikara/Effectiveness_of_Gamification_Education."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "In this paper a reproduction of 'On the effectiveness of game-like and social approaches in learning: Comparing educational gaming, gamification & social networking' was done. We discoved that gamification while not as effective as intial thought, it has the pontential to be better than traditonal educational system especially when comes to assignments. These results are important as it suggested that students can perform even better academically."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -224,7 +224,7 @@ Weakness of this dataset is that age column take the average age, which is 19 ye
 
 ## Future Studies
 
-Like I mentioned before, this paper shows that gamification has potential to surpass traditional educational system. In future studies, more attention should be put into designing the gamification aspect. The Octalysis framework should be used and the design should it is best to meet all 8 core drives. Furthermore, Yu-kai is open to collaboration and consulting so that could make the design even more robust as there is more than just this framework that he talks on his website. In addition, there should focus on social elements as well since that experiement did well in post tests. Lastly, this design is probably going to need multiple iterations and constant feedback from the students to further improve it and to allow it eventually surpass the traditional education system.
+Like I mentioned before, this paper shows that gamification has potential to surpass traditional educational system. In future studies, more attention should be put into designing the gamification aspect. The Octalysis framework should be used and the design should it is best to meet all 8 core drives. Furthermore, Yu-kai is open to collaboration and consulting so that could make the design even better as there is more than just this framework that he talks about on his website. In addition, there should focus on social elements as well since that experiement did well in post tests. Lastly, this design is probably going to need multiple iterations and constant feedback from the students to further improve it and to allow it eventually surpass the traditional education system.
 \newpage
 
 \appendix
