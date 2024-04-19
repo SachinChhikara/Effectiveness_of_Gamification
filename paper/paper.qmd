@@ -5,7 +5,7 @@ author:
 thanks: "Code and data are available at: https://github.com/SachinChhikara/Effectiveness_of_Gamification_Education."
 date: today
 date-format: long
-abstract: "In this paper a reproduction of 'On the effectiveness of game-like and social approaches in learning: Comparing educational gaming, gamification & social networking' was done. We discoved that gamification while not as effective as intial thought, it has the pontential to be better than traditonal educational system especially when comes to assignments. These results are important as it suggested that students can perform even better academically."
+abstract: "In this paper a reproduction of the paper 'On the effectiveness of game-like and social approaches in learning: Comparing educational gaming, gamification & social networking' was done. We discoved that gamification while not as effective as intial thought, it has the pontential to be better than traditonal educational system especially when comes to assignments. These results are important as it suggested that students can perform even better academically."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -23,7 +23,7 @@ library(arrow)
 
 # Introduction
 
-Games have been part of human history for a long time and are loved by many young and old. The design behind why game are so fun have investigated in recent time and how to apply those element that are fun and to apply them to other fields, this is known as gamification. Gamification is used in fields such as enterprise, sales, lifestyle and education. In this paper we will focusing on application of education, we be using data from Duolingu, training model and making inference off, real life application of gamification to an individual productive.
+Games have been part of human history for a long time and are loved by many young and old. Games are able to keep players engage, motivate and give the feeling of accomplishment. Due to this, recently people have been studying games and trying to understand how to apply these concepts to non-game related fields, this is known as gamification. Gam
 
 In this paper, we are doing replication of a study ... , which has a control and treatment where the treatment is applied gamification, while the control is using an ordinary education system. Yeah there benefits, but there are downside when comes to how the gamification as it might discourage learning. Furthermore, an wide use application of gamification is a language learning app called Duolingo, which has ... active users and this app learning is recognized in certain Universities as legitimate English learning.So we examine game design that are use. Ways to apply gamification in daily lives, like this app called Habitica: Gamify your tasks.
 
@@ -221,6 +221,8 @@ knitr::include_graphics(file.path(here::here(),"other/figures/octalysis_framewor
 Limitations of this dataset is that doesn't tell us how student's satisfaction, retention, motivation and engagement. This is would useful information since it will paint us better picture on the effectiveness of gamification. In addition, if students don't really like then it would be indicator whether gamification is not working or that something missing that could improve it. According to study about academic boredom (@article), some aspects of it comes from lack of motivation and learning methods, so if gamification can solve this would a huge win for students and for society at a whole. Furthermore, if students really enjoy gamification then this means this a potential valid learning method, which could convince others to fund and study further.
 
 Weakness of this dataset is that age column take the average age, which is 19 years in this case and gives every student that age. If the dataset gave us every student's age or even age range this could useful in determining which age group was benefiting more from gamification. It could that told us younger students better with gamification, but old students preform better with the traditional learning system.
+
+Another weakness of this study is that study it reproduce is about 10 years old. This mean that data may not hold up as well. But there are not many gamification studies that compare treatment to a experiment group, and with open source data to boot. Also, Duolingo is popular language learn app, which use gamification and it has millions of active users which suggest that gamification is not a dead field and it is clearly effective for learning languages.
 
 ## Future Studies
 
