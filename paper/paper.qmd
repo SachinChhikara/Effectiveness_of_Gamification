@@ -23,9 +23,14 @@ library(arrow)
 
 # Introduction
 
-Games have been part of human history for a long time and are loved by many young and old. Games are able to keep players engage, motivate and give the feeling of accomplishment. Due to this, recently people have been studying games and trying to understand how to apply these concepts to non-game related fields, this is known as gamification. Gam
+Games have been part of human history for a long time and are loved by many young and old. Games are able to keep players engage, motivate and give the feeling of accomplishment. Due to this, recently people have been studying games and trying to understand how to apply these concepts to non-game related fields, this is known as gamification. And it is used in many fields such as enterprise, sales, lifestyle, education and etc.
 
-In this paper, we are doing replication of a study ... , which has a control and treatment where the treatment is applied gamification, while the control is using an ordinary education system. Yeah there benefits, but there are downside when comes to how the gamification as it might discourage learning. Furthermore, an wide use application of gamification is a language learning app called Duolingo, which has ... active users and this app learning is recognized in certain Universities as legitimate English learning.So we examine game design that are use. Ways to apply gamification in daily lives, like this app called Habitica: Gamify your tasks.
+The focus of this paper will be an application of gamification in the education field. In this paper, we are doing a reproduction of paper called
+"On the effectiveness of game-like and social approaches in learning: Comparing educational gaming, gamification & social networking". In this paper, they took a control group, students using a traditional educational system and four treatment groups, which were students using different learning approaches which involved social and game elements. The focus of the study was to see if gamifcation was effective and this was achieve by looking at academic performance of the groups.And just like original paper we will focus on effective of gamifcation, using the grades of the students, which range from 0 - 100%. In addition, we will also be asking the question whether gamification works better for male or female.
+
+And what we found in this paper is that gamification may not be as effective for examinations, but it works well for assignment. Even then there is still room for improvement in the design and this can help to enliven student's education. And if we are to motive students this can help their lives and others, which can create a more positive impact on society.
+
+This current section is introduction, the next section is data section where we discuss the data used and explore it. Then, we have a section where create a model out of such data and explain the reasoning behind our model design it. After that, we have results section where we talk about figures and tables that were replicate from the original paper and the model results. Lastly, we have the discussion section where discuss the results and how it connects to outside world.
 
 # Data
 ## Data Source
