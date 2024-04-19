@@ -81,6 +81,8 @@ knitr::include_graphics(file.path(here::here(),"other/figures/figure3.jpg"))
 knitr::include_graphics(file.path(here::here(),"other/tables/table1.jpg"))
 ```
 
+\newpage
+
 ## Variables of Interest and Data Cleaning Procedure
 
 The variables used in this study are Group, Gender, pretest and post test for Word Processing, Spreadsheets, Presentation, Databases and FinalExamination. Pretest, post test and FinalExamination use the measurement of a grade, which is from 0 - 100%.
